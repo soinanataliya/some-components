@@ -1,0 +1,78 @@
+
+.Step {
+  cursor: pointer;
+  display: flex;
+  flex-grow: 1;
+  height: 20px;
+  outline: none;
+  position: relative;
+  user-select: none;
+  &:last-child {
+    height: 4px;
+    width: 12px;
+  }
+
+  &__badge {
+    white-space: nowrap;
+  }
+
+  &__step {
+    background:  #d1cfd7;
+    height: 4px;
+    outline: none;
+    position: relative;
+    width: 100%;
+    &--last {
+      border-bottom-right-radius: 3px;
+      border-top-right-radius: 3px;
+    }
+    &--in-range {
+      background: #195E5E;
+    }
+  }
+  &__division {
+    background:  #d1cfd7;
+    flex-shrink: 0;
+    height: 8px;
+    outline: none;
+    position: absolute;
+    width: 2px;
+    &--choosed {
+      background:#195E5E;
+      border-radius: 50%;
+      height: 16px;
+      left: -6px;
+      top: -6px;
+      width: 16px;
+    }
+    &--in-range {
+      background:#195E5E;
+      border-bottom: 4px  #195E5E solid;
+    }
+  }
+
+  &__time {
+    left: -15px;
+    position: absolute;
+    top: 10px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .Step {
+    &__badge {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 480px){
+  .Step {
+    &__badge {
+      display: none;
+    }
+    &__time {
+      display: none;
+    }
+  }
+}
