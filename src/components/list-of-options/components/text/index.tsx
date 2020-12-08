@@ -16,20 +16,12 @@ type PropsType = {
 
 export type FontSizeType = 'h0' | 'h1' | 'h2' | 'h3' | 'h4' | 'h5';
 export type FontColorType =
-  | 'Orange'
   | 'DarkPurple'
-  | 'Purple'
   | 'Green'
-  | 'SuperDuperLightPurple'
-  | 'Red'
-  | 'LightRed'
-  | 'LightYellow'
-  | 'LightBlue'
   | 'Black'
   | 'White'
   | 'RichGrey'
   | 'Grey'
-  | 'LightGrey';
 
 export const Text = memo(
   ({
