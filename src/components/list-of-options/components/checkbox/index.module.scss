@@ -1,0 +1,42 @@
+
+.checkboxContainer {
+  cursor: pointer;
+  display: inline-block;
+  user-select: none;
+}
+.checkboxContainer input {
+  cursor: pointer;
+  height: 0;
+  opacity: 0;
+  position: absolute;
+  width: 0;
+}
+.checkboxIcon {
+  border: 1.2px solid grey;
+  border-radius: 4px;
+  box-sizing: border-box;
+  display: inline-block;
+  height: 20px;
+  left: 0;
+  top: 0;
+  width: 20px;
+}
+.checkboxIcon svg {
+  display: none;
+  padding-left: 2px;
+  padding-top: 4px;
+}
+.checkboxContainer input:checked ~ .checkboxIcon {
+  background-color: orange;
+  border: 1.2px solid orange;
+  &.color {
+    background-color: orange;
+    border-color: orange;
+  }
+}
+.checkboxContainer input:checked ~ .checkboxIcon svg {
+  display: block;
+}
+.checkboxContainer input:focus ~ .checkboxIcon {
+  border: 1px solid orange;
+}
